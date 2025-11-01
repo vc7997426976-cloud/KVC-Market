@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVC Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home-screen" class="container">
+        <div class="header-icons">
+            <span class="icon">◎</span>
+            <span class="icon" id="owner-menu-button">⋮</span>
+        </div>
+        
+        <h1>KVC MARKET</h1>
+        <p>
+            100% ORIGINAL<br>
+            EVERY RUPEE YOU INVEST<br>
+            COMES BACK TO YOU
+        </p>
+        
+        <div class="button-container">
+            <button id="show-login-btn" class="btn">LOGIN</button>
+            <button id="show-register-btn" class="btn">REGISTER</button>
+        </div>
+    </div>
+
+    <div id="register-screen" class="container" style="display:none;">
+        <h2>Register New Account</h2>
+        <input type="text" id="reg-name" placeholder="Name">
+        <input type="email" id="reg-email" placeholder="Email (ID)">
+        <input type="password" id="reg-pass" placeholder="Password">
+        <input type="date" id="reg-dob" placeholder="Date of Birth">
+        <input type="text" id="reg-gender" placeholder="Gender">
+        <input type="text" id="reg-upi" placeholder="UPI ID">
+        <input type="text" id="reg-bank" placeholder="Bank Account Number">
+        <input type="text" id="reg-ifsc" placeholder="IFSC Code">
+        <button id="register-btn" class="btn">Register</button>
+        <a href="#" id="back-to-home-1" class="back-link">Back to Home</a>
+    </div>
+
+    <div id="login-screen" class="container" style="display:none;">
+        <h2>Login to your Account</h2>
+        <input type="email" id="login-email" placeholder="Email (ID)">
+        <input type="password" id="login-pass" placeholder="Password">
+        <button id="login-btn" class="btn">Login</button>
+        <a href="#" id="back-to-home-2" class="back-link">Back to Home</a>
+    </div>
+
+    <div id="owner-screen" class="container" style="display:none;">
+        <h2>Owner Access</h2>
+        <input type="email" id="owner-email" placeholder="Owner Email">
+        <input type="password" id="owner-pass" placeholder="Owner Password">
+        <button id="owner-login-btn" class="btn">Owner Login</button>
+        <a href="#" id="back-to-home-3" class="back-link">Back to Home</a>
+    </div>
+
+    <div id="dashboard-screen" class="container" style="display:none;">
+        <h2>Welcome, <span id="user-name-display">User</span>!</h2>
+        <div id="social-links">
+            </div>
+        <h3>Marketplace</h3>
+        <div id="item-list">
+            </div>
+        <button id="logout-btn" class="btn-danger">Logout</button>
+    </div>
+
+    <div id="admin-screen" class="container" style="display:none;">
+        <h2>Owner Admin Panel</h2>
+        <button id="admin-logout-btn" class="btn-danger">Logout</button>
+    </div>
+
+    <div id="help-screen" class="container" style="display:none;">
+        <h2>Help & Support Chat</h2>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="chat-send-btn" class="btn">Send</button>
+        <a href="#" class="back-link">Back to Dashboard</a>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
